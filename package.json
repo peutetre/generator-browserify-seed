@@ -1,0 +1,19 @@
+{
+  "name": "generator-browserify-seed",
+  "version": "0.0.1",
+  "description": "a project seed for generator-mobile-app using browserify",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/peutetre/generator-browserify-seed.git"
+  },
+  "dependencies": {
+    "yeoman-generator": "0.14.2"
+  },
+  "author": "Paul Panserrieu <paul@42loops.com> (http://42loops.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peutetre/generator-browserify-seed/issues"
+  },
+  "homepage": "https://github.com/peutetre/generator-browserify-seed"
+}

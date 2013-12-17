@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    <% dependencies.forEach(function (dep, idx) { %>"<%= (dep.trim()) %>" : "*"<%= (idx === dependencies.length-1 ? '' : ',\n   ') %> <% }) %>
+  },
+  "devDependencies": {
+    "browserify": "2.29.1"
+  },
+}
