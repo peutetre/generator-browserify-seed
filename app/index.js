@@ -30,9 +30,9 @@ function askForDependencies(done) {
         message : 'Add your dependencies separated with comma:'
     }], function (props) {
         this.dependencies = props.dependencies.split(',')
-        .filter(function (dep) { return dep.length > 0; })
-        .map(function (dep) { return dep.trim(); });
-    done();
+            .filter(function (dep) { return dep.length > 0; })
+            .map(function (dep) { return dep.trim(); });
+        done();
     }.bind(this));
 }
 
@@ -41,8 +41,8 @@ BrowserifySeedGenerator.prototype.askUserFor = function askFor() {
 
     var prompts = [{
         type:'confirm',
-            name:'addDeps',
-            message:'Do you want to add some dependencies?',
+        name:'addDeps',
+        message:'Do you want to add some dependencies?',
         default:true
     }];
 
