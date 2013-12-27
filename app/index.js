@@ -6,18 +6,11 @@ var util = require('util'),
 var BrowserifySeedGenerator = module.exports = function BrowserifySeedGenerator(args, options, config) {
     yeoman.generators.Base.apply(this, arguments);
 
-    this.on('end', function () {
-        this.installDependencies({
-            skipInstall: true,
-            skipMessage: true
-        });
-    });
-
     // add all user settings from generator-mobile-app
     for (var setting in options.userSettings)
         this[setting] = options.userSettings[setting];
 
-    this.deps = [];
+    this.dependencies = [];
     this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
 
@@ -47,7 +40,7 @@ BrowserifySeedGenerator.prototype.askUserFor = function askFor() {
     }];
 
     this.prompt(prompts, function (props) {
-        if (props.addDeps) this.deps = askForDependencies.call(this, cb);
+        if (props.addDeps) askForDependencies.call(this, cb);
         else cb();
     }.bind(this));
 
