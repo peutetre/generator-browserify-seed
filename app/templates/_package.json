@@ -4,5 +4,9 @@
   },
   "devDependencies": {
     "browserify": "2.29.1"
+  },
+  "scripts": {
+    "www-prod": "./node_modules/browserify/bin/cmd.js ./www/app/main.js -o ./www/main.js",
+    "www-dev":  "./node_modules/browserify/bin/cmd.js ./www/app/main.js -o ./www/main.js --debug"
   }
 }
