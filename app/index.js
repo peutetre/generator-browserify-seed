@@ -54,3 +54,12 @@ BrowserifySeedGenerator.prototype.app = function app() {
     this.template('_main.js', 'www/app/main.js');
     this.copy('main.css', 'www/style/main.css');
 };
+
+BrowserifySeedGenerator.prototype.specializeIndexForTargets = function () {
+    var src, dest;
+    this.targets.forEach(function (target) {
+        src = '_index.' + target + '.html';
+        dest = 'merges/' + target + '/index.html';
+        this.template(src, dest);
+    }.bind(this));
+};
